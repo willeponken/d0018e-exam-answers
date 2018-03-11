@@ -1,4 +1,4 @@
--- Below follows a Schema that fullfills 1NF, 2NF and 3NFp for Question 2.
+-- Below follows a Schema that fullfills 1NF, 2NF and 3NF for Question 2.
 
 -- Class represents a class.
 -- Class is only used to minimize data duplication.
