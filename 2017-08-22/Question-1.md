@@ -1,3 +1,5 @@
+# Question 1
+```sql
 CREATE TABLE IF NOT EXISTS `S` (
   `C` INT NOT NULL,
   `D` INT NOT NULL,
@@ -54,3 +56,4 @@ INSERT INTO R(A, B, C) VALUES
 
 -- j)
 -- CREATE TABLE R(C INT, D INT) -- TABLE R ALREADY EXISTS (GOT: Table 'r' already exists)
+```
