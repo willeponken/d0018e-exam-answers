@@ -1,3 +1,7 @@
+# Question 2
+
+## a)
+```sql
 -- Below follows a Schema that fullfills 1NF, 2NF and 3NF for Question 2.
 
 -- Class represents a class.
@@ -43,3 +47,41 @@ CREATE TABLE BookGenre(
     FOREIGN KEY (Book) REFERENCES Book(ID),
     FOREIGN KEY (Genre) REFERENCES Genre(Name)
 );
+```
+
+## b)
+ - **Book**: `(ID)`
+ - **BookGenre**: `(Book, Genre)`
+ - **Class**: `(Name)`
+ - **Genre**: `(Name)`
+ 
+## c)
+### First normal form (1NF)
+ 1. It should only have single(atomic) valued attributes/columns.
+ 2. Values stored in a column should be of the same domain
+ 3. All the columns in a table should have unique names.
+ 4. And the order in which data is stored, does not matter.
+
+The schema fullfills 1NF because:
+ 1. [x] No column contain two types of values, i.e. one column with both `<Genre>;<Class>` (example: `"Horror";"Fiction"`) - it's seperated in their own columns.
+ 2. [x] No column contain different types of values not related to each other.
+ 3. [x] No column have the same name (not even possible with SQL).
+ 4. [x] The row order does not matter (data is not related inter-row).
+
+### Second normal form (2NF)
+ 1. It should be in the First Normal form.
+ 2. And, it should not have Partial Dependency.
+
+The schema fullfills 2NF because:
+ 1. [x] See 1NF above.
+ 2. [x] No attribute is partially dependent on the composite key. An example that would contain partial dependencies is if `(Class)` would be a column in `BookGenre`, `(Class)` would then depend on a subset of the composite key `(Book, Genre)` (with the subset being `(Genre)`).
+
+### Third normal form (3NF)
+ 1. It is in the Second Normal form.
+ 2. And, it doesn't have Transitive Dependency.
+
+The schema fullfills 3NF because:
+ 1. [x] See 2NF above.
+ 2. [x] No attribute indirectly depends on another attribute (a book can have several genres). 
+ 
+ 
