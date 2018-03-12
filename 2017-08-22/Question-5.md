@@ -17,4 +17,4 @@ The client will use that node to send its request to, other nodes are selected f
 For a replication degree of 3, one request is stored as primary copy, and the rest (two) is stored at the replication nodes.
 
 ## d)
-There is no master in Cassandra, in the sense of a server that controls all nodes. The data is however not perfectly distributed over all nodes, only at the primary and replocation nodes.
+There is no master in Cassandra, in the sense of a server that controls all nodes. The data is however not perfectly distributed over all nodes, only at the primary and replication nodes.
